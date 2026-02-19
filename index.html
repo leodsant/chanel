@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLEU DE CHANEL</title>
+  <link rel="shortcut icon" href="./dist/images/Chanel-Symbol.png" type="image/x-icon">
+  <link rel="stylesheet" href="./dist/css/output.css">
+  <script type="importmap">
+    {
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@v0.182.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.182.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+
+<body class="overflow-x-hidden cor-fundo">
+
+
+  <div class="flex w-full items-center flex-col text-white relative h-full">
+    <header
+      class="cor-nav sticky top-5 font-semibold text-sm z-50 w-285 h-14 rounded-md mt-25 flex justify-between items-center px-10">
+      <h1>BLEU DE CHANEL</h1>
+      <nav class="flex gap-14">
+        <a href="">BLEU DE CHANEL L'EXCLUSIF</a>
+        <a class="text-white/50" href="">AS INTERPRETAÇÕES</a>
+        <a class="text-white/50" href="">A COLEÇÃO</a>
+      </nav>
+    </header>
+  </div>
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+
+
+      <main id="hero" class="text-white relative h-dvh flex flex-col items-center">
+
+        <div class="absolute z-10 text-4xl font-semibold grid grid-cols-3 w-350 h-25 place-items-center items-center">
+          <h1 class="uppercase justify-self-center tracking-widest col-start-2">chanel</h1>
+          <div class="scale-80 cursor-pointer flex flex-row gap-5 ease-in-out">
+            <div class="nav-icons"><i class="fa-solid fa-magnifying-glass fa-2xs"></i></div>
+            <div class="nav-icons"><i class="fa-solid fa-user fa-2xs"></i></div>
+            <div class="nav-icons"><i class="fa-solid fa-star fa-2xs"></i></div>
+            <div class="nav-icons"><i class="fa-solid fa-bag-shopping fa-2xs"></i></div>
+          </div>
+        </div>
+
+        <div id="blur" class="absolute z-0 w-230 h-230 rounded-full cor-luz top-1/2 -translate-y-1/4 blur-[200px]"></div>
+        <div id="blur2" class="absolute z-0 w-200 h-200 rounded-full cor-luz left-0 -translate-x-1/2 overflow-x-hidden top-1/2 -translate-y-1/4 blur-[200px]"></div>
+
+        <div id="hero-btn" class="absolute z-50  bottom-10 flex flex-col items-center gap-3">
+          <h1 class="uppercase tracking-widest font-semibold text-3xl">o novo perfume</h1>
+          <button id="btn"
+            class="uppercase font-bold border cor-destaque px-5 py-2 text-xs transition-colors duration-400 cursor-pointer ease-in-out">R$
+            1.995 - ADICIONAR AO CARRINHO</button>
+          <div class="border-r opacity-50 cor-destaque h-7"></div>
+        </div>
+
+        <div class="perfume-pai absolute z-30">
+          <div class="perfume">
+
+          </div>
+        </div>
+
+      </main>
+
+      <section class="subir h-dvh flex flex-col items-center text-white justify-center gap-30 uppercase">
+        <p id="text" class="w-sm font-semibold text-sm">Conheça os segredos por trás da criação do novo perfume BLEU DE CHANEL L'EXCLUSIF. Um frasco de vidro, cujo design intrigante ecoa a intensidade extraordinária desta nova criação.</p>
+        <div id="img" class=""><img class="w-162 h-162 bg-center object-cover" src="./dist/images/1764148674010-chanel-bleu_938x750.jpg" alt=""></div>
+      </section>
+
+
+
+
+    </div>
+  </div>
+
+
+  <script src="https://kit.fontawesome.com/b522bdfe69.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/Observer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+  <script src="./dist/js/gsap.js"></script>
+  <script type="module" src="./dist/js/3d.js"></script>
+</body>
+
+</html>
