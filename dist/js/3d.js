@@ -36,13 +36,56 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const loader = new GLTFLoader();
   loader.load("./dist/public/perfume.glb", (gltf) => {
     perfume = gltf.scene;
-    perfume.position.z = 0;
-    perfume.position.y = -3.4;
-    perfume.rotation.y = .7;
-    perfume.rotation.x = .4;
     cena.add(perfume);
 
 
+    const openTl = gsap.timeline();
+
+    openTl.fromTo(perfume.position, {
+      z: -9,
+      y: -5
+    }, {
+      y: -1,
+      duration: 2,
+      ease: "power2.inOut"
+    }, 0);
+    
+    openTl.fromTo(perfume.rotation, {
+      y: 1.57,
+      x: 0
+    }, {
+      y: 1.57,
+      x: 0
+    }, 0);
+    
+    openTl.to(perfume.position, {
+      z: 0,
+      y: -3.4,
+      duration: 3,
+      ease: "power2.inOut"
+    }, 2);
+    
+    openTl.to(perfume.rotation, {
+      x: .4,
+      y: .7,
+      duration: 3,
+      ease: "power2.inOut"
+    }, 2);
+
+    openTl.from(luzDirecional.position, {
+      y: 50,
+      duration: 1,
+      ease: "power2.inOut"
+    }, 4)
+
+    openTl.from(pontoLuz.position, {
+      y: 50,
+      duration: 1,
+      ease: "power2.inOut"
+    }, 1)
+    
+    
+    
     ScrollTrigger.create({
       trigger: "#hero",
       start: "top top",
@@ -74,6 +117,55 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   animar()
 
+
+   let heroTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#hero",
+        start: "bottom 95%",
+        end: "bottom 50%",
+        scrub: true,
+        pin: true,
+        markers: false
+    }
+  });
+
+  heroTl.to("#hero-btn", {
+    opacity: 0,
+    y: -200
+  }, 0);
+
+  
+  heroTl.to("#blur", {
+    x: 1200,
+    scale: 0.5,
+    y: 100
+  }, 0);
+
+  
+  heroTl.from("#blur2", {
+    y: 200,
+    x: -600
+  }, 0);
+
+  
+  
+  const sectionTl = gsap.timeline({ scrollTrigger: {
+    trigger: "#text ",
+    start: "top bottom",
+    end: "bottom 30%",
+    scrub: 2,
+    markers: true
+  } });
+
+  sectionTl.to(".subir", {
+    y: -400
+  }, 0);
+  
+  sectionTl.fromTo("#img",{
+    width: 300
+  }, {
+    width: 500,
+  }, 0);
 
 
 

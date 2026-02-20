@@ -2,53 +2,46 @@ document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(Observer,ScrollTrigger,ScrollSmoother,SplitText)
 
 
-
-  let heroTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#hero-btn",
-        scroll: "body",
-        start: "bottom 95%",
-        end: "top 60%",
-        scrub: 2,
-        pin: true,
-        markers: false
-    }
-  });
-
-  heroTl.to("#hero-btn", {
+  gsap.from("#hero-btn", {
     opacity: 0,
-    y: -400
-  }, 0);
-
-  heroTl.to("#blur", {
-    x: 1200,
-    scale: 0.5,
-    y: 100
-  }, 0);
-
-  heroTl.from("#blur2", {
-    y: 200,
-    x: -500
-  }, 0);
-
-  heroTl.to(".subir", {
-    y: -600
-  }, 0);
-
-  gsap.fromTo("#img",{
-    width: 400
+    y: 50,
+    duration: 2,
+    ease: "power2.out"
+  }, 3);
+  
+  gsap.fromTo("#blur", {
+    opacity: 0,
+    x: 500,
+    scale: .3
   }, {
-    width: 500,
-    scrollTrigger: {
-      trigger: "#img",
-      scroller: "body", 
-      start: "top 60%",
-      end: "bottom 40%",
-      scrub: 2,
-      markers: false
-    }
-  })
+    opacity: 100,
+    scale: .8,
+    duration: 1,
+    ease: "power2.inOut"
+  } );
+  
+  gsap.to("#blur", {
+    y: -600,
+    x: 2000,
+    duration: 2
+  }, 0.5);
 
+  gsap.fromTo("#blur", {
+    x: 500,
+    y: 200,
+    scale: .3
+  }, {
+    scale: 1,
+    duration: 3,
+    x: 0,
+    y: -200,
+    ease: "power3.out"
+  }, 2.5);
+
+
+ 
+
+  
 
 
 
