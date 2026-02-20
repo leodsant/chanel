@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     start: "top bottom",
     end: "bottom 30%",
     scrub: 2,
-    markers: true
+    markers: false
   } });
 
   sectionTl.to(".subir", {
