@@ -1,6 +1,6 @@
 
 
-# ✈ Bleu de Chanel
+# 💰 Bleu de Chanel
 
 Landing Page inspirada na página bleu de chanel do site da chanel
 ## 🖥 Tecnologias usadas
